@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
-    <title>SỰ KIỆN HOT</title>
+    <title>THƯỞNG GAME KHỦNG</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="robots" content="index,follow" />
@@ -29,7 +29,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
-<body class="kl_child">
+<body id="kl_bonus_game" class="kl_child">
 
     <div id="Zoom">
         <header class="kl_header">
@@ -47,14 +47,23 @@
                         <li class="kl_menu_item"><a href="events.html" class="kl_menu_link" title="Trang Chủ">SỰ KIỆN IPHONE XS MAX</a></li>
                         <li class="kl_menu_item"><a href="artist.html" class="kl_menu_link" title="Trang Chủ">TRANH TÀI 150 TRIỆU</a></li>
                         <li class="kl_menu_item"><a href="shoot-fish.html" class="kl_menu_link" title="Trang Chủ">BẮN CÁ CỰC VUI</a></li>
-                        <li class="kl_menu_item kl_menu_active">
+                        <li class="kl_menu_item">
                             <a href="event-hot.html" class="kl_menu_link" title="Trang Chủ">
                                 SỰ KIỆN HOT
                                 <img class="kl_menu_item_icon" src="images/swallow.png" alt="">
                             </a>
                         </li>
-                        <li class="kl_menu_item"><a href="bonus-game.html" class="kl_menu_link" title="Trang Chủ">THƯỞNG GAME KHỦNG</a></li>
+                        <li class="kl_menu_item kl_menu_active"><a href="bonus-game.html" class="kl_menu_link" title="Trang Chủ">THƯỞNG GAME KHỦNG</a></li>
                     </ul>
+                    <span class="CauChucBenTrai">
+                        <img src="images/GIF/CauChucBenTrai.gif" alt="">
+                    </span>
+                    <span class="PhaoNoTungBung">
+                            <img src="images/GIF/PhaoNoTungBung.gif" alt="">
+                    </span>
+                    <span class="CauChucBenPhai">
+                            <img src="images/GIF/CauChucBenPhai.gif" alt="">
+                    </span>
                 </div>
                 <div class="kl_menu_mobile">
                     <div class="dropdown">
@@ -77,18 +86,56 @@
         </header>
         <!-- Header -->
         <div class="main">
-            <div class="kl_events_hot clearfix">
-                <div class="kl_box">
-                    <a href="#" title="">
-                        <img src="images/GIF/Cao3La-ChoiNgay.gif" alt="">
-                    </a>
-                    <a href="#" title="">
-                        <img src="images/GIF/Cao3La-NhanVeThamGia.gif" alt="">
-                    </a>
+            <div class="kl_bonus_game clearfix">
+                <div class="kl_slide">
+                    <h2 class="kl_title">
+                        <img src="images/thuong_game_tet.png" alt="">
+                    </h2>
+                    <div class="kl_content">
+                        <div class="owl-carousel" data-dots="false" data-nav="true" data-margin="0" data-items='1' data-autoplayTimeout="700" data-autoplay="true" data-loop="true">
+                            <div class="item">
+                                <img src="images/slider/1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kl_slide">
+                    <h2 class="kl_title">
+                        <img src="images/thuong_game_tet2.png" alt="">
+                    </h2>
+                    <div class="kl_content">
+                        <div class="owl-carousel" data-dots="false" data-nav="true" data-margin="0" data-items='1' data-autoplayTimeout="700" data-autoplay="true" data-loop="true">
+                            <div class="item">
+                                <img src="images/slider/2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider/2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Main -->
+        <section class="kl_Cherry-MaiVang2">
+            <img src="images/Cherry-MaiVang.png" alt="">
+        </section>
+        <!-- kl_Cherry-MaiVang -->
     </div>
 
     <!-- ===== JS ===== -->
@@ -98,6 +145,7 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- Js Slick -->
     <script src="lib/slick/slick.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <!-- Js Datepicker -->
     <script src="lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="lib/jquery-ui/jquery.ui.datepicker-vi-VN.js"></script>

@@ -18,60 +18,48 @@
     function Zoom() {
         var winHeight = $(window).height();
         var zoom = 1;
-        var bodyMaxHeight = 1331;
+        var bodyMaxHeightHome = 1331;
+        var bodyMaxHeight = 749;
+        var zoom_home = winHeight/bodyMaxHeightHome;
         zoom = winHeight/bodyMaxHeight;
         /* Firefox */
         var winWidth = $(window).width();
         var widthFirefox = winWidth/zoom;
+        var widthFirefox_home = winWidth/zoom_home;
         var winWidths = $(window).height();
-        if(navigator.userAgent.indexOf("Firefox") != -1) {
-            $('#Zoom').css({
-                '-moz-transform': 'scale('+zoom+')',  /* Firefox */
-                'transform-origin': '0 0',
-                'width': widthFirefox,
-            });
-        } else {
-            $('#Zoom').css({
-                'zoom': zoom,
-            });
-        }
+        
+        $('body').each(function () {
+            if ($(this).is("#kl_home")) {
+                if(navigator.userAgent.indexOf("Firefox") != -1) {
+                    $('#Zoom').css({
+                        '-moz-transform': 'scale('+zoom_home+')',  /* Firefox */
+                        'transform-origin': '0 0',
+                        'width': widthFirefox_home,
+                    });
+                } else {
+                    $('#Zoom').css({
+                        'zoom': zoom_home,
+                    });
+                }
+            } else {
+                if(navigator.userAgent.indexOf("Firefox") != -1) {
+                    $('#Zoom').css({
+                        '-moz-transform': 'scale('+zoom+')',  /* Firefox */
+                        'transform-origin': '0 0',
+                        'width': widthFirefox,
+                    });
+                } else {
+                    $('#Zoom').css({
+                        'zoom': zoom,
+                    });
+                }
+            }
+        });
     }
     Zoom();
     $(window).on('load resize', function() {
         Zoom();
     });
-
-    // $(function() {
-    //     $(".hasDatepicker").click(function() {
-    //         var CssTop = $('#ui-datepicker-div').css('top').replace('px','');
-    //         var CssLeft = $('#ui-datepicker-div').css('left').replace('px','');
-    //         var cssZoom = $('#Zoom').css('zoom').replace('px','');
-
-    //         var newCssTop = CssTop * cssZoom;
-    //         var newCssLeft = CssLeft * cssZoom;
-
-    //         if(navigator.userAgent.indexOf("Firefox") != -1) {
-    //             var cssTransform = $('#Zoom').css('moz-transform').replace('px','');
-    //             var newCssTop_Transform = CssTop * cssTransform;
-    //             var newCssLeft_Transform = CssLeft * cssTransform;
-    //             $(this).parents('body').find('#ui-datepicker-div').css({
-    //                 'top'   : newCssTop_Transform,
-    //                 'left'  : newCssLeft_Transform,
-    //             })
-    //         } else {
-    //             $(this).parents('body').find('#ui-datepicker-div').css({
-    //                 'top'   : newCssTop,
-    //                 'left'  : newCssLeft,
-    //             });
-    //             return false;
-    //         }
-
-    //         // $(this).parents('body').find('#ui-datepicker-div').css({
-    //         //     'top'   : newCssTop,
-    //         //     'left'  : newCssLeft,
-    //         // })
-    //     });
-    // });
 
     // Slider Rewards
     $('.kl_autoplay').slick({
@@ -114,13 +102,6 @@
         // Kick off one resize to fix all videos on page load
     }).resize();
 
-    // function NewCSS() {
-    //     var CssTop = $('#ui-datepicker-div').css('top');
-    //     console.log('top',CssTop);
-    // }
-    // NewCSS();
-
-
     $(document).on('click', '.kl_fixed .kl_item .kl_btnclose', function (e) {
         e.preventDefault();
         $(this).parent().hide();
@@ -128,6 +109,23 @@
 
     $(window).on('load',function(){
         $('.kl_activeLoad').modal('show');
+    });
+
+    // Slide Carousel
+    $(document).ready(function() {
+        $(".owl-carousel").each(function(index, el) {
+        var config = $(this).data();
+        config.navText = ['<img src="images/slider-prev.png" alt="slder-prev">','<img src="images/slider-next.png" alt="slder-next">'];
+        config.smartSpeed="800";        
+        if($(this).hasClass('owl-style2')){
+            config.animateOut="fadeOut";
+            config.animateIn="fadeIn";    
+        }
+        if($(this).hasClass('dotsData')){
+            config.dotsData="true";
+        }
+        $(this).owlCarousel(config);
+        });
     });
     
 })(jQuery); // End of use strict
