@@ -19,7 +19,7 @@
         var winHeight = $(window).height();
         var zoom = 1;
         var bodyMaxHeightHome = 1331;
-        var bodyMaxHeight = 749;
+        var bodyMaxHeight = 782;
         var zoom_home = winHeight/bodyMaxHeightHome;
         zoom = winHeight/bodyMaxHeight;
         /* Firefox */
