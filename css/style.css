@@ -1559,26 +1559,29 @@ h1, h2, h3, h4, h5, h6, p {
     float: right;
     position: relative;
 }
-.kl_event .kl_content .kl_gif img {
+.kl_event .kl_content .kl_gif {
     position: absolute;
     top: 0;
     left: -75px;
     z-index: 1;
+    display: none;
 }
 .kl_event .kl_content .kl_scroll {
     position: absolute;
     bottom: 0;
-    right: -25px;
+    right: 0;
     z-index: 1;
 }
 .kl_event .kl_content .kl_main_text {
-    background: url(../images/bg_text.png) no-repeat;
     position: relative;
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
     padding: 18px;
     padding-left: 180px;
+    margin: 0 10px;
+    border: 2px solid #f3dea4;
+    border-radius: 10px;
 }
 .kl_event .kl_content .kl_main_text::-webkit-scrollbar { 
     display: none; 
@@ -1623,13 +1626,15 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 1;
 }
 .kl_artist .kl_content .kl_main_text {
-    background: url(../images/bg_text.png) no-repeat;
     position: relative;
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
     padding: 18px;
     padding-left: 180px;
+    margin: 0 10px;
+    border: 2px solid #f3dea4;
+    border-radius: 10px;
 }
 .kl_artist .kl_content .kl_main_text::-webkit-scrollbar { 
     display: none; 
@@ -1761,6 +1766,12 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     height: 100%;
 }
+.kl_desktop {
+    display: block;
+}
+.kl_mobile {
+    display: none;
+}
 
 /* ***** RESPONSIVE ***** */
 @media (max-width: 1366px) {
@@ -1885,6 +1896,72 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .modal-backdrop.show {
         opacity: .8;
+    }
+    .kl_highlight-left,
+    .kl_highlight-center {
+        width: 100%;
+    }
+    .kl_highlight-right {
+        display: none;
+    }
+    .kl_highlight-left .kl_btn_bird {
+        display: none;
+    }
+    .kl_desktop {
+        display: none;
+    }
+    .kl_mobile {
+        display: block;
+    }
+    .kl_highlight-left .title {
+        margin-bottom: 15px;
+    }
+    .kl_highlight-left .kl_sty_description {
+        padding-right: 30%;
+        text-align: justify;
+        position: relative;
+    }
+    .kl_highlight-left .kl_sty_description:after {
+        content: url(../images/Girl_highligh_mobile.png);
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+    }
+    .kl_event,
+    .kl_artist {
+        width: auto;
+    }
+    .kl_event .kl_content,
+    .kl_artist .kl_content {
+        width: auto;
+    }
+    .kl_event .kl_content .kl_gif {
+        display: none;
+    }
+    .kl_event .kl_content .kl_scroll,
+    .kl_artist .kl_content .kl_scroll {
+        right: 0;
+    }
+    .kl_event .kl_content .kl_main_text,
+    .kl_artist .kl_content .kl_main_text {
+        padding: 10px;
+    }
+    .kl_artist .kl_content .kl_gif {
+        display: none;
+    }
+    .kl_sty_description {
+        font-size: 18px;
+    }
+    .kl_events_hot {
+        background: url(../images/bg_eventhot_mobile.jpg) no-repeat;
+        min-height: 1182px;
+    }
+    .kl_events_hot .kl_box {
+        width: auto;
+        height: 685px;
+    }
+    .kl_events_hot .kl_box a {
+        margin-right: 0;
     }
 }
 @media (max-width: 750px) {
