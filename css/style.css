@@ -229,6 +229,9 @@ h1, h2, h3, h4, h5, h6, p {
     -webkit-transform: matrix( 0.98158457998855,0,0,0.98216092073992,0,0);
     -ms-transform: matrix( 0.98158457998855,0,0,0.98216092073992,0,0);
 }
+.kl_modal .modal-content {
+    background-color: transparent;
+}
 
 .kl_btn_close_modal {
     padding: 10px;
@@ -1376,9 +1379,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .content {
     margin-left: 30px;
-    margin-top: 20px;
-    width: 625px;
-    padding: 10px 15px;
+    margin-top: 0;
+    width: 400px;
+    padding: 10px 15px 30px;
     border: solid 1px rgb(255, 208, 117);
     border-radius: 4px;
     position: relative;
@@ -1388,7 +1391,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_modal_shoot-fish .content {
     margin-left: 0;
-    margin-top: 50px;
+    margin-top: 28px;
 }
 .content .form-group {
     display: flex;
@@ -1564,7 +1567,6 @@ h1, h2, h3, h4, h5, h6, p {
     top: 0;
     left: -75px;
     z-index: 1;
-    display: none;
 }
 .kl_event .kl_content .kl_scroll {
     position: absolute;
@@ -1826,7 +1828,7 @@ h1, h2, h3, h4, h5, h6, p {
         background: transparent;
         border: none;
         color: #ffec8d;
-        font-size: 36px;
+        font-size: 30px;
     }
     .kl_menu_mobile .dropdown-toggle:focus,
     .kl_menu_mobile .dropdown-toggle:active,
@@ -1894,9 +1896,6 @@ h1, h2, h3, h4, h5, h6, p {
         text-align: center;
         margin-bottom: 20px;
     }
-    .modal-backdrop.show {
-        opacity: .8;
-    }
     .kl_highlight-left,
     .kl_highlight-center {
         width: 100%;
@@ -1932,7 +1931,8 @@ h1, h2, h3, h4, h5, h6, p {
         width: auto;
     }
     .kl_event .kl_content,
-    .kl_artist .kl_content {
+    .kl_artist .kl_content,
+    .kl_bonus_game {
         width: auto;
     }
     .kl_event .kl_content .kl_gif {
@@ -1962,6 +1962,19 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .kl_events_hot .kl_box a {
         margin-right: 0;
+    }
+    .kl_bonus_game .kl_slide {
+        margin-bottom: 0;
+    }
+    .kl_bonus_game .kl_slide .kl_title {
+        text-align: center;
+    }
+    .list_gift .item {
+        text-align: center;
+        margin-bottom: 10px
+    }
+    .list_gift .item:last-child {
+        margin-bottom: 0;
     }
 }
 @media (max-width: 750px) {
@@ -2515,4 +2528,7 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_main2_sign {
         width: auto;
     }
+}
+.modal-backdrop.show {
+    opacity: .8;
 }
