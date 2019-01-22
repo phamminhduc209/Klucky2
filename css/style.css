@@ -1736,6 +1736,20 @@ h1, h2, h3, h4, h5, h6, p {
     width: 80px;
     height: 260px;
 }
+#kl_bonus_game .kl_modal_events {
+    background: transparent;
+    display: block;
+}
+#kl_bonus_game .kl_modal_events:before {
+    display: none;
+}
+#kl_bonus_game .kl_modal_banner img {
+    width: 100%;
+
+}
+#kl_bonus_game .content {
+    margin: 0 auto;
+}
 
 /* Shoot Fish */
 .kl_shoot_fish {
@@ -1975,6 +1989,31 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .list_gift .item:last-child {
         margin-bottom: 0;
+    }
+    .kl_artist .kl_artist_tittle_mb,
+    .kl_event .kl_event_tittle_mb {
+        margin-bottom: 10px;
+        margin-left: -10px;
+        position: relative;
+    }
+    .kl_artist .kl_artist_tittle_mb_gif {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 250px;
+    }
+    .kl_modal_events .kl_itemGif {
+        position: absolute;
+        bottom: -114px;
+        z-index: 1;
+    }
+    .kl_modal_events .kl_itemGif {
+        position: absolute;
+        bottom: -114px;
+        z-index: 1;
+    }
+    .kl_modal_events.kl_modal_artist .kl_itemGif {
+        bottom: -180px;
     }
 }
 @media (max-width: 750px) {
