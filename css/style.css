@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 16px;
     font-weight: bold;
     font-family: "Arial";
-    color: rgb(251, 218, 32);
+    color: rgb(239, 215, 147);
     line-height: 1.418;
     text-align: center;
     text-transform: uppercase;
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_menu_content .kl_menu_item:hover a,
 .kl_menu_content .kl_menu_item.kl_menu_active a {
-    border: 1px solid rgb(255, 235, 175);
+    border: 1px solid rgb(239, 215, 147);
 }
 
 /* ***** Modal ***** */
@@ -1280,23 +1280,43 @@ h1, h2, h3, h4, h5, h6, p {
     left: 0;
     z-index: 11;
 }
-.kl_fixed .kl_item {
+.kl_item {
     position: relative;
+    min-width: 480px;
+    max-width: 480px;
+    min-height: 115px;
+    display: flex;
+    align-items: flex-end;
 }
-.kl_fixed .kl_item .kl_btnclose {
+.kl_fixed.kl_bcRutGon {
+    position: fixed;
+    top: 110px;
+    bottom: auto;
+    left: 0;
+}
+.kl_fixed.kl_bcRutGon .kl_item {
+    min-width: 300px;
+    max-width: 300px;
+}
+.kl_fixed.kl_bcRutGon .kl_item img {
+    width: 300px;
+    height: auto;
+}
+.kl_item .kl_btnclose {
     cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
     background: #520000;
     text-align: center;
-    line-height: 30px;
+    line-height: 20px;
     color: #f3c76f;
     transition: all .2s;
 }
-.kl_fixed .kl_item .kl_btnclose:hover {
+.kl_item .kl_btnclose:hover {
     opacity: .8;
     transition: all .2s;
 }
@@ -1316,7 +1336,7 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: -1;
 }
 .kl_Cherry-MaiVang2 img {
-    width: 340px;
+    width: 80%;
     height: auto;
 }
 .kl_Gril {
@@ -1941,8 +1961,14 @@ h1, h2, h3, h4, h5, h6, p {
         bottom: -30px;
     }
     .kl_event,
-    .kl_artist {
+    .kl_artist,
+    .kl_shoot_fish {
         width: auto;
+    }
+    .kl_shoot_fish .kl_gif_shoot {
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
     .kl_event .kl_content,
     .kl_artist .kl_content,
@@ -2014,6 +2040,68 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .kl_modal_events.kl_modal_artist .kl_itemGif {
         bottom: -180px;
+    }
+    .kl_fixed.kl_bcRutGon {
+        top: 0;
+        position: relative;
+    }
+    .kl_fixed.kl_bcRutGon .kl_item {
+        min-width: 480px;
+        max-width: 480px;
+    }
+    .kl_fixed.kl_bcRutGon .kl_item img {
+        width: 480px;
+        height: auto;
+    }
+    #kl_shoot_fish .kl_Cherry-MaiVang2 {
+        right: -80px;
+        left: auto;
+    }
+    .kl_gif_shoot .kl_item {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+    .kl_gif_shoot img {
+        width: 100%;
+    }
+    .kl_gif_shoot .kl_thantai {
+        width: 334px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    .kl_fixed.kl_bcRutGon .kl_item {
+        margin-top: 50px;
+    }
+    .kl_shoot_fish .kl_content {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+    .portrait_mode {
+        transform: rotate(90deg);
+        width: 100vh !important;
+        height: 100vh !important;
+    }
+    .kl_shoot_fish .portrait_mode .kl_wrap_content {
+        width: 100vh;
+        height: 100vh;
+        padding: 0;
+    }
+    .kl_shoot_fish .kl_content .kl_wrap_content {
+
+    }
+    .portrait_mode .kl_shoot_fish .kl_content .kl_wrap_content iframe {
+        width: 100vh;
+        height: 100vh;
+    }
+    .portrait_mode_hide .kl_shoot_fish {
+        padding-top: 0;
+    }
+    .portrait_mode_hide .kl_gif_shoot,
+    .portrait_mode_hide #kl_shoot_fish .kl_Cherry-MaiVang2,
+    .portrait_mode_hide header {
+        display: none;
     }
 }
 @media (max-width: 750px) {
@@ -2342,6 +2430,12 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_contactNow ul:last-child {
         margin-left: 0;
         margin-top: 15px;
+    }
+    .kl_fixed.kl_bcRutGon .kl_item {
+        max-width: 100%;
+    }
+    .kl_fixed.kl_bcRutGon .kl_item img {
+        width: 100%;
     }
 }
 

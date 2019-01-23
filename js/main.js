@@ -2,17 +2,17 @@
     "use strict";
 
     // Change viewport
-    function ChangeWiewport() {
-        if (screen.width < 750) {
-            $("#viewport").attr("content", "width=750");
-        }else{
-            $("#viewport").attr("content", "width=device-width, initial-scale=1");
-        }
-    }
-    ChangeWiewport();
-    $(window).on('load resize', function() {
-        ChangeWiewport();
-    });
+    // function ChangeWiewport() {
+    //     if (screen.width < 750) {
+    //         $("#viewport").attr("content", "width=750");
+    //     }else{
+    //         $("#viewport").attr("content", "width=device-width, initial-scale=1");
+    //     }
+    // }
+    // ChangeWiewport();
+    // $(window).on('load resize', function() {
+    //     ChangeWiewport();
+    // });
 
     // Zoom Web on in all browser
     function Zoom() {
@@ -102,7 +102,7 @@
         // Kick off one resize to fix all videos on page load
     }).resize();
 
-    $(document).on('click', '.kl_fixed .kl_item .kl_btnclose', function (e) {
+    $(document).on('click', '.kl_item .kl_btnclose', function (e) {
         e.preventDefault();
         $(this).parent().hide();
     });
@@ -127,5 +127,18 @@
         $(this).owlCarousel(config);
         });
     });
+    // $(document).ready(function () {
+    //     function reorient(e) {
+    //         var portrait = (window.orientation % 180 == 0);
+    //         $("body").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+    //     }s
+    // });
+    $('.kl_gif_shoot .kl_banner .kl_item a').click(function () {
+        console.log('Click!');
+        $('html').addClass('portrait_mode_hide');
+        $('.kl_shoot_fish .kl_content').addClass('portrait_mode');
+        // window.onorientationchange = reorient;
+        // window.setTimeout(reorient, 0);
+    })
     
 })(jQuery); // End of use strict
