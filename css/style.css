@@ -230,7 +230,19 @@ h1, h2, h3, h4, h5, h6, p {
     -ms-transform: matrix( 0.98158457998855,0,0,0.98216092073992,0,0);
 }
 .kl_modal .modal-content {
+    background-color: #6f040e;
+}
+.kl_modal_bonus .kl_modal .modal-content {
     background-color: transparent;
+}
+.kl_modal_bonus .kl_modal_banner {
+    position: relative;
+}
+.kl_modal_bonus .kl_modal_banner span {
+    position: absolute;
+    right: 50px;
+    width: 80px;
+    height: 260px;
 }
 
 .kl_btn_close_modal {
@@ -764,6 +776,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_content .kl_content_right {
     float: left;
+    width: -moz-calc(100% - 232px);
+    width: -webkit-calc(100% - 232px);
     width: calc(100% - 232px);
     border-radius: 4px;
     background-color: rgba(62, 0, 0, 0.6);
@@ -1253,6 +1267,8 @@ h1, h2, h3, h4, h5, h6, p {
 #kl_home .kl_menu_desktop:before,
 #kl_home  .kl_menu_desktop:after {
     position: absolute;
+    bottom: -moz-calc(-100% - 155px);
+    bottom: -webkit-calc(-100% - 155px);
     bottom: calc(-100% - 155px);
 }
 #kl_home .kl_menu_desktop:before {
@@ -1375,9 +1391,15 @@ h1, h2, h3, h4, h5, h6, p {
 .kl_modal_events:before {
     content: url(../images/KLUCKY-KMIPHONEXS-popUp1.png);
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     z-index: 1;
+}
+.kl_modal_events2 {
+    background: url('../images/KLUCKY-KMIPHONEXS-popUp4.png') no-repeat 100% 100%;
+}
+.kl_modal_events.kl_modal_events2:before {
+    display: none;
 }
 
 .kl_modal_shoot-fish {
@@ -1409,6 +1431,18 @@ h1, h2, h3, h4, h5, h6, p {
     background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgb(255,243,152) 0%, rgb(184,0,0) 0%, rgb(134,0,0) 52%, rgb(84,0,0) 100%);
     background-image: -ms-radial-gradient( 50% 50%, circle closest-side, rgb(255,243,152) 0%, rgb(184,0,0) 0%, rgb(134,0,0) 52%, rgb(84,0,0) 100%);
 }
+.content .zalo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.kl_modal_events .kl_itemGif {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 335px;
+}
 .kl_modal_shoot-fish .content {
     margin-left: 0;
     margin-top: 28px;
@@ -1431,7 +1465,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: .8rem;
 }
 .content .kl_form_field {
+    width: -moz-calc(100% - 140px);
+    width: -webkit-calc(100% - 140px);
     width: calc(100% - 140px);
+    
 }
 .content .kl_form_field .kl_form_input {
     border-radius: 4px;
@@ -1512,16 +1549,23 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_highlight-center {
     float: left;
+    width: -moz-calc(100% - 828px);
+    width: -webkit-calc(100% - 828px);
     width: calc(100% - 828px);
 }
 .kl_highlight-right {
     float: left;
     width: 414px;
-    padding: 10px 30px;
+    padding: 10px 0 10px 30px;
     position: relative;
     -moz-box-shadow: -2px -4px 5px #231f20;
     -webkit-box-shadow: -2px -4px 5px #231f20;
     box-shadow: -2px -4px 5px #231f20;
+}
+.kl_highlight-right .highlight-center-content {
+    position: relative;
+    bottom: -25px;
+    right: -40px;
 }
 
 .kl_clip_frame {
@@ -1595,7 +1639,7 @@ h1, h2, h3, h4, h5, h6, p {
 .kl_event .kl_content .kl_scroll {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -19.5px;
     z-index: 1;
 }
 .kl_event .kl_content .kl_main_text {
@@ -1648,7 +1692,7 @@ h1, h2, h3, h4, h5, h6, p {
 .kl_artist .kl_content .kl_scroll {
     position: absolute;
     bottom: 0;
-    right: -25px;
+    right: -19.5px;
     z-index: 1;
 }
 .kl_artist .kl_content .kl_main_text {
@@ -2094,22 +2138,8 @@ h1, h2, h3, h4, h5, h6, p {
         height: 100%;
         background: transparent;
     }
-    .portrait_mode {
-        transform: rotate(90deg);
-        width: 100vh !important;
-        height: 100vh !important;
-    }
-    .kl_shoot_fish .portrait_mode .kl_wrap_content {
-        width: 100vh;
-        height: 100vh;
-        padding: 0;
-    }
-    .kl_shoot_fish .kl_content .kl_wrap_content {
-
-    }
-    .portrait_mode .kl_shoot_fish .kl_content .kl_wrap_content iframe {
-        width: 100vh;
-        height: 100vh;
+    .portrait_mode_hide .kl_content.kl_desktop {
+        display: block;
     }
     .portrait_mode_hide .kl_shoot_fish {
         padding-top: 0;
@@ -2282,6 +2312,8 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 0 30px;
     }
     .kl_listGift .kl_Giftitem {
+        width: -moz-calc(100% / 2);
+        width: -webkit-calc(100% / 2);
         width: calc(100% / 2);
     }
 
@@ -2460,6 +2492,8 @@ h1, h2, h3, h4, h5, h6, p {
         padding-top: 140px;
     }
     .kl_listGift .kl_Giftitem {
+        width: -moz-calc(100% / 2);
+        width: -webkit-calc(100% / 2);
         width: calc(100% / 2);
     }
     .kl_autoplay_style .slick-list {
