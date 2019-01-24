@@ -245,18 +245,29 @@ h1, h2, h3, h4, h5, h6, p {
     height: 260px;
 }
 
-.kl_btn_close_modal {
+.kl_btn_close_modal2 {
     padding: 10px;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
+}
+.kl_btn_close_modal2 .close {
+    opacity: 1;
+}
+.kl_btn_close_modal2 .close img {
+    width: 30px;
+    height: 30px;
+}
+.kl_btn_close_modal {
+    padding: 10px 15px 0;
 }
 .kl_btn_close_modal .close {
     opacity: 1;
 }
 .kl_btn_close_modal .close img {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
 }
 .kl_btn {
     border-radius: 12px;
