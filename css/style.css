@@ -1537,6 +1537,10 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     height: 100%;
 }
+.kl_clip_frame .box iframe {
+    width: 100%;
+    height: 100%;
+}
 .kl_highlight .kl_content {
     width: 100%;
     height: 300px;
@@ -1674,7 +1678,6 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     height: 768px;
     background-position: center top;
-    background-size: 100% 100%;
 }
 .kl_events_hot .kl_box {
     position: relative;
@@ -1821,6 +1824,19 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_listGift {
         width: auto;
         padding: 0 15px;
+    }
+    .kl_header_ct {
+        width: auto;
+    }
+    .kl_menu_content .kl_menu_item .kl_menu_link {
+        font-size: 14px;
+    }
+    .kl_event,
+    .kl_artist,
+    .kl_shoot_fish {
+        padding: 5px 10px 5px 10px;
+        width: auto;
+        margin: 0 auto;
     }
 }
 @media (max-width: 1024px) {

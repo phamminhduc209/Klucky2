@@ -2,17 +2,17 @@
     "use strict";
 
     // Change viewport
-    // function ChangeWiewport() {
-    //     if (screen.width < 750) {
-    //         $("#viewport").attr("content", "width=750");
-    //     }else{
-    //         $("#viewport").attr("content", "width=device-width, initial-scale=1");
-    //     }
-    // }
-    // ChangeWiewport();
-    // $(window).on('load resize', function() {
-    //     ChangeWiewport();
-    // });
+    function ChangeWiewport() {
+        if (screen.width < 750) {
+            $("#viewport").attr("content", "width=750");
+        }else{
+            $("#viewport").attr("content", "width=device-width, initial-scale=1");
+        }
+    }
+    ChangeWiewport();
+    $(window).on('load resize', function() {
+        ChangeWiewport();
+    });
 
     // Zoom Web on in all browser
     function Zoom() {
