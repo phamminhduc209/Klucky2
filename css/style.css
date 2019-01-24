@@ -1547,7 +1547,7 @@ h1, h2, h3, h4, h5, h6, p {
 .kl_highlight-left .title {
     margin-bottom: 50px;
 }
-.kl_sty_description {
+.kl_sty_description p {
     font-size: 14.4px;
     font-family: "Arial";
     color: rgb(253, 233, 172);
@@ -1555,7 +1555,7 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.418;
     margin-bottom: 20px;
 }
-.kl_sty_description:last-child {
+.kl_sty_description p:last-child {
     margin-bottom: 0;
 }
 .kl_highlight-center {
@@ -1575,8 +1575,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_highlight-right .highlight-center-content {
     position: relative;
-    bottom: -25px;
-    right: -40px;
+    bottom: -60px;
+    right: -55px;
 }
 
 .kl_clip_frame {
