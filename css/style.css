@@ -1442,6 +1442,11 @@ h1, h2, h3, h4, h5, h6, p {
     background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgb(255,243,152) 0%, rgb(184,0,0) 0%, rgb(134,0,0) 52%, rgb(84,0,0) 100%);
     background-image: -ms-radial-gradient( 50% 50%, circle closest-side, rgb(255,243,152) 0%, rgb(184,0,0) 0%, rgb(134,0,0) 52%, rgb(84,0,0) 100%);
 }
+.content form {
+    z-index: 2;
+    display: block;
+    position: relative;
+}
 .content .zalo {
     position: absolute;
     bottom: 10px;
@@ -1479,7 +1484,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: -moz-calc(100% - 140px);
     width: -webkit-calc(100% - 140px);
     width: calc(100% - 140px);
-    
+    position: relative;
 }
 .content .kl_form_field .kl_form_input {
     border-radius: 4px;
@@ -1494,6 +1499,25 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: .8rem;
     margin: 5px 0 0;
     display: none;
+    position: absolute;
+    top: -30px;
+    right: -45px;
+    z-index: 1;
+    background: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+.content .kl_form_field .required:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -7px;
+    border: 5px solid;
+    border-color: red transparent transparent red;
 }
 .content .kl_btn {
     width: 150px;
@@ -1590,7 +1614,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_highlight-right .highlight-center-content {
     position: relative;
-    bottom: -60px;
+    bottom: -75px;
     right: -55px;
 }
 .table-customize td:first-child {
@@ -1658,7 +1682,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_event .kl_content {
     width: 1290px;
-    height: 395px;
+    height: 410px;
     float: right;
     position: relative;
 }
@@ -1707,7 +1731,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_artist .kl_content {
     width: 1290px;
-    height: 395px;
+    height: 435px;
     float: right;
     position: relative;
 }
@@ -1813,7 +1837,7 @@ h1, h2, h3, h4, h5, h6, p {
 #kl_bonus_game .kl_header .CauChucBenTrai,
 #kl_bonus_game .kl_header .CauChucBenPhai {
     position: absolute;
-    bottom: -395px;
+    bottom: -400px;
 }
 #kl_bonus_game .kl_header .CauChucBenTrai {
     left: -90px;
@@ -1886,6 +1910,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_mobile {
     display: none;
+}
+.txt_modal_home {
+    display: none !important;
 }
 
 /* ***** RESPONSIVE ***** */
@@ -2409,6 +2436,9 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 0;
         margin-top: 0;
         margin-left: 0;
+    }
+    #kl_home .txt_modal_home {
+        display: block !important;
     }
     .kl_site_menu_mobile .dropdown-item {
         text-align: center;
