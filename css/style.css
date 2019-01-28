@@ -1567,9 +1567,9 @@ h1, h2, h3, h4, h5, h6, p {
     width: 414px;
     padding: 10px 30px 50px;
     position: relative;
-    -moz-box-shadow: 4px 0 5px #231f20;
-    -webkit-box-shadow: 4px 0 5px #231f20;
-    box-shadow: 4px 0 5px #231f20;
+    -moz-box-shadow: 2px 4px 5px #231f20;
+    -webkit-box-shadow: 2px 4px 5px #231f20;
+    box-shadow: 2px 4px 5px #231f20;
 }
 .kl_highlight-left .title {
     margin-bottom: 50px;
@@ -1627,11 +1627,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .kl_clip_frame {
     background: url(../images/kl_clip_frame.png) no-repeat;
+    background-size: 100% 100%;
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: auto;
     height: 399px;
-    margin: 0 auto;
+    margin: -20px -20px 0;
 }
 .kl_clip_frame .box {
     padding: 12px;
@@ -1644,11 +1645,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_highlight .kl_content {
     width: 100%;
-    height: 300px;
+    height: calc(100vh - 225px);
     position: relative;
 }
 .kl_highlight .kl_content .kl_clip_frame_text {
-    padding: 10px 20px 20px;
+    padding: 20px;
     text-align: justify;
     max-height: 100%;
     overflow: hidden;
@@ -1656,8 +1657,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .kl_highlight .kl_content .kl_scroll {
     position: absolute;
-    bottom: 0;
-    right: -25px;
+    bottom: 20px;
+    right: -28px;
     z-index: 1;
 }
 .kl_highlight .kl_content .kl_clip_frame_text::-webkit-scrollbar { 
@@ -1914,6 +1915,9 @@ h1, h2, h3, h4, h5, h6, p {
 .txt_modal_home {
     display: none !important;
 }
+#kl_closeshot {
+    display: none;
+}
 
 /* ***** RESPONSIVE ***** */
 @media (max-width: 1366px) {
@@ -2028,7 +2032,7 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_menu_mobile .dropdown-item.dropdown-item-active {
         display: none;
     }
-    .kl_modal .modal-content {
+    .kl_activeLoad .kl_modal .modal-content {
         background: transparent;
     }
     #kl_home .kl_modal_bg {
@@ -2080,7 +2084,7 @@ h1, h2, h3, h4, h5, h6, p {
         content: url(../images/Girl_highligh_mobile.png);
         position: absolute;
         right: -30px;
-        bottom: -60px;
+        bottom: -55px;
     }
     .kl_event,
     .kl_artist,
@@ -2170,15 +2174,8 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .kl_fixed.kl_bcRutGon {
         top: 0;
+        right: 0;
         position: relative;
-    }
-    .kl_fixed.kl_bcRutGon .kl_item {
-        min-width: 480px;
-        max-width: 480px;
-    }
-    .kl_fixed.kl_bcRutGon .kl_item img {
-        width: 480px;
-        height: auto;
     }
     #kl_shoot_fish .kl_Cherry-MaiVang2 {
         right: -80px;
@@ -2186,8 +2183,10 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .kl_gif_shoot .kl_item {
         max-width: 100%;
+        min-width: unset;
         width: 100%;
         display: block;
+        align-items: unset;
     }
     .kl_gif_shoot img {
         width: 100%;
@@ -2209,12 +2208,50 @@ h1, h2, h3, h4, h5, h6, p {
         display: block;
     }
     .portrait_mode_hide .kl_shoot_fish {
-        padding-top: 0;
+        padding: 0;
+    }
+    .portrait_mode_hide .kl_shoot_fish .kl_content .kl_wrap_content {
+        padding: 0;
     }
     .portrait_mode_hide .kl_gif_shoot,
     .portrait_mode_hide #kl_shoot_fish .kl_Cherry-MaiVang2,
     .portrait_mode_hide header {
         display: none;
+    }
+    .portrait_mode_hide #kl_closeshot {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        background: #71020e;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+    }
+    .kl_btn_close_modal2 .close img {
+        width: 50px;
+        height: 50px;
+    }
+    .kl_item .kl_btnclose {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        line-height: 50px;
+    }
+    .kl_clip_frame {
+        margin: 0;
+    }
+    .kl_highlight .kl_content {
+        height: 100vh;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .kl_highlight .kl_content .kl_clip_frame_text {
+        padding: 0;
+        max-height: 60%;
     }
 }
 @media (max-width: 750px) {

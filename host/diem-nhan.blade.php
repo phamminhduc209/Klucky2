@@ -23,14 +23,14 @@
         </div>
         <div class="kl_highlight-center">
             <div class="highlight-center-content">
-                <div class="kl_clip_frame">
-                    <div class="box">
-                        <iframe src="https://www.youtube.com/embed/ytgGnSH8gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
                 <div class="kl_content">
                     <div class="kl_clip_frame_text">
+                        <div class="kl_clip_frame">
+                            <div class="box">
+                                <iframe src="https://www.youtube.com/embed/ytgGnSH8gkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
                         <div class="kl_sty_description">
                             <p>
                                 <img src="{{ URL::asset('assets/images/heighlight1.jpg') }}" style="float: left; margin-right: 20px;" alt="">
