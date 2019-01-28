@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, p {
     vertical-align: middle;
 }
 .kl_background_home {
-    background: url(../images/BG_Big_.jpg) #3c0701 no-repeat;
+    background: url(../images/BG_Big.jpg) #3c0701 no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
@@ -1321,14 +1321,6 @@ h1, h2, h3, h4, h5, h6, p {
     bottom: auto;
     left: 0;
 }
-.kl_fixed.kl_bcRutGon .kl_item {
-    min-width: 300px;
-    max-width: 300px;
-}
-.kl_fixed.kl_bcRutGon .kl_item img {
-    width: 300px;
-    height: auto;
-}
 .kl_item .kl_btnclose {
     cursor: pointer;
     position: absolute;
@@ -1985,7 +1977,7 @@ h1, h2, h3, h4, h5, h6, p {
         background: transparent;
         border: none;
         color: #ffec8d;
-        font-size: 30px;
+        font-size: 32px;
     }
     .kl_menu_mobile .dropdown-toggle:focus,
     .kl_menu_mobile .dropdown-toggle:active,
@@ -2126,6 +2118,7 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_events_hot {
         background: url(../images/bg_eventhot_mobile.jpg) no-repeat;
         min-height: 1182px;
+        background-position: center top;
     }
     .kl_events_hot .kl_box {
         width: auto;
@@ -2252,6 +2245,15 @@ h1, h2, h3, h4, h5, h6, p {
     .kl_highlight .kl_content .kl_clip_frame_text {
         padding: 0;
         max-height: 60%;
+    }
+    .lucky-wrap .randomizer-wrap {
+        top: 40%;
+    }
+    #kl_home {
+        overflow: hidden;
+    }
+    body {
+        overflow: auto;
     }
 }
 @media (max-width: 750px) {
