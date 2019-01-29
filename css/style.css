@@ -1937,6 +1937,35 @@ h1, h2, h3, h4, h5, h6, p {
         width: auto;
         margin: 0 auto;
     }
+    .kl_highlight-left,
+    .kl_highlight-right {
+        width: 360px;
+    }
+    .kl_highlight-right .highlight-center-content {
+        right: 0;
+    }
+    .kl_highlight-center {
+        width: -moz-calc(100% - 720px);
+        width: -webkit-calc(100% - 720px);
+        width: calc(100% - 720px);
+    }
+    .kl_highlight .kl_content {
+        height: calc(100vh - 80px);
+    }
+}
+@media screen and (max-width: 1366px) and (min-width: 1024px) and (orientation:landscape) {
+    .kl_highlight-left,
+    .kl_highlight-right {
+        width: 300px;
+    }
+    .kl_highlight-center {
+        width: -moz-calc(100% - 600px);
+        width: -webkit-calc(100% - 600px);
+        width: calc(100% - 600px);
+    }
+    .kl_highlight .kl_content {
+        height: calc(100vh - 450px);
+    }
 }
 @media (max-width: 1024px) {
     .kl_menu_desktop,
@@ -2255,6 +2284,16 @@ h1, h2, h3, h4, h5, h6, p {
     body {
         overflow: auto;
     }
+    .modal-open .fix_gif_modal {
+        display: block;
+    }
+    #kl_bonus_game .kl_modal_events {
+        width: auto;
+        margin: 20px;
+    }
+    #kl_bonus_game .content {
+        width: 100%;
+    }
 }
 @media (max-width: 750px) {
     #Zoom {
@@ -2264,7 +2303,6 @@ h1, h2, h3, h4, h5, h6, p {
         transform: none !important;
     }
 }
-
 /* Modal */
 @media (min-width: 768px) {
     .kl_modal {
@@ -2595,7 +2633,6 @@ h1, h2, h3, h4, h5, h6, p {
         width: 100%;
     }
 }
-
 @media (max-width: 568px) {
     .kl_main2 {
         padding-top: 140px;
@@ -2609,7 +2646,6 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 0 50px 0 0;
     }
 }
-
 @media (max-width: 480px) {
     .kl_menu_mobile .dropdown-toggle {
         font-size: 18px;
@@ -2665,7 +2701,6 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 0 30px;
     }
 }
-
 @media (max-width: 375px) {
     .kl_main_contact .kl_btn {
         width: auto;
@@ -2676,7 +2711,6 @@ h1, h2, h3, h4, h5, h6, p {
         font-size: 20px;
     }
 }
-
 @media (max-width: 320px) {
     .kl_contactNow p {
         font-size: 4px;
@@ -2730,7 +2764,6 @@ h1, h2, h3, h4, h5, h6, p {
         width: 100%;
     }
 }
-
 .kl_main2_getnumber .kl_text_contact {
     margin-bottom: 25px;
 }
@@ -2742,14 +2775,11 @@ h1, h2, h3, h4, h5, h6, p {
 .kl_main2_getnumber .kl_modal_information_home .kl_form_name {
     font-size: 1.2rem;
 }
-
 @media only screen and (min-width: 768px) {
     .kl_main2_getnumber .kl_main_contact {
         padding: 20px;
     }
 }
-
-
 .kl_main2_sign {
     position: absolute;
     top: 0;
@@ -2823,4 +2853,29 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .modal-backdrop.show {
     opacity: .8;
+}
+.fix_gif_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+.fix_gif_modal .fix_gif_modal_box {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+.fix_gif_modal .fix_gif_modal_box p {
+    text-align: center;
+}
+.fix_gif_modal .fix_gif_modal_box p img {
+    width: 65%;
+}
+.fix_gif_modal .fix_gif_modal_box p:first-child {
+    margin-right: auto;
+}
+.fix_gif_modal .fix_gif_modal_box p:last-child {
+    margin-left: auto;
 }
